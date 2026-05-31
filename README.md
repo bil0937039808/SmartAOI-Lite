@@ -1,4 +1,4 @@
-# SmartAOI-Lite: 智慧產線瑕疵檢測與 MES 數據自動化採集系統
+# SmartAOI-Lite: 瑕疵檢測與 MES 數據自動化採集系統
 # OpenCV影像辨識與MySQL資料庫整合
 
 根據製造業數位轉型（OT to IT）設計的輕量化驗證專案（PoC）。
