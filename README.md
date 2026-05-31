@@ -17,21 +17,20 @@
 ## 系統架構圖 (System Architecture)
 
 ```text
-[ 產線現場 / OT ]                              [ 企業系統 / IT ]
+[ 產線現場 / OT ]              [ 企業系統 / IT ]
   工業相機拍照 
        │
        ▼
- [監聽資料夾] ──> (RPA 影像辨識 Worker) 
-                       │ (OpenCV 瑕疵與條碼辨識)
-                       ▼
-                 [封裝 JSON 數據]
-                       │
-                       ▼  (HTTP POST / API)
-                 (FastAPI 後端服務)
-                       │
-                       ▼
-                 [ 關聯式資料庫 ] (MySQL)
-
+  [監聽資料夾]      ──>      (RPA 影像辨識 Worker) 
+                                     │ (OpenCV 瑕疵與條碼辨識)
+                                     ▼
+                              [封裝 JSON 數據]
+                                     │
+                                     ▼  (HTTP POST / API)
+                             (FastAPI 後端服務)
+                                     │
+                                     ▼
+                       [ 關聯式資料庫 ] (MySQL / PostgreSQL)
 ```
 ## 運作成果截圖
 圖片來源:https://zh.pngtree.com/freepng/the-integrated-circuit-board_3387702.html
