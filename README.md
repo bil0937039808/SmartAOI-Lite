@@ -34,6 +34,7 @@
 
 ```
 ## 運作成果截圖
+圖片來源:https://zh.pngtree.com/freepng/the-integrated-circuit-board_3387702.html
 ![測試圖片](result/test_image.jpg)
 ![檢測後的輸出圖片](result/test_image_result.jpg)
 ![程式終端反應](result/terminal_result.JPG)
