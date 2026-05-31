@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 專案核心痛點與解決方案
+## 專案核心痛點與解決方案
 
 *   **傳統產線盲檢失誤：** 依靠人工檢驗容易因疲勞導致漏檢。本專案利用**電腦視覺算法**實作第一道防線的自動化幾何/色彩篩選。
 *   **資訊孤島（IT/OT 斷層）：** 產線機台數據無法即時關聯至 ERP/MES 系統。本專案利用 **RPA 自動化腳本外掛 API** 串接，打通底層 CIM 與上層資料庫的資料流。
@@ -14,7 +14,7 @@
 
 ---
 
-## 🏗️ 系統架構圖 (System Architecture)
+## 系統架構圖 (System Architecture)
 
 ```text
 [ 產線現場 / OT ]                              [ 企業系統 / IT ]
@@ -31,3 +31,10 @@
                        │
                        ▼
                  [ 關聯式資料庫 ] (MySQL)
+
+```
+## 運作成果截圖
+![測試圖片](result/test_image.jpg)
+![檢測後的輸出圖片](result/test_image_result.jpg)
+![程式終端反應](result/terminal_result.JPG)
+![MySQL內的結果](result/sql_result.JPG)
