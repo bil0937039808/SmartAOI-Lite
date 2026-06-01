@@ -1,4 +1,4 @@
-
+#uvicorn database:app --reload --port 8000
 from datetime import datetime
 from typing import Optional
 
@@ -6,17 +6,25 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pymysql
 import pymysql.cursors
+from datetime import datetime
+from typing import Optional
+import os
+from dotenv import load_dotenv
+load_dotenv()   # 自動載入同目錄下的 .env
+ 
 DB_CONFIG = {
-    "host":     "localhost","port":     3306,
-    "user":     "aoi_user",
-    "password": "aoi_password",
-    "database": "smartaoi",
-    "charset":  "utf8mb4",
+    "host":        os.getenv("DB_HOST", "localhost"),
+    "port":        int(os.getenv("DB_PORT", 3306)),
+    "user":        os.getenv("DB_USER"),
+    "password":    os.getenv("DB_PASSWORD"),
+    "database":    os.getenv("DB_NAME"),
+    "charset":     "utf8mb4",
     "cursorclass": pymysql.cursors.DictCursor,
 }
 app = FastAPI(title="SmartAOI-Lite", version="1.0.0")
 def get_conn():
     return pymysql.connect(**DB_CONFIG)
+
 class InspectionResult(BaseModel):
     sn_id:          str
     defect_area:    int
